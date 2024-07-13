@@ -1,1 +1,1 @@
-# Analyzing-Unicorn-Companies
+Using a PostgreSQL database I was able to analyze information about unicorn companies (those are companies worth over $1 billion). I found out which industries have the highest average valuation and then zoomed in on these to determine how many new unicorns have been produced annually between 2019 and 2021.
