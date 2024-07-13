@@ -1,0 +1,4 @@
+Summary:
+- cte_1 (1st common table expression) identifies the three industries with the highest number of companies that joined in the years 2019-2021.
+- cte_2 (2nd common table expression)calculates the number of unicorns and the average valuation of companies for each industry and year within the same period.
+The final query combines the results of both ctes, groups, and sorts them to provide information about the number of unicorns and the average valuation of companies (in billions of dollars) for the three industries with the highest number of companies in the years 2019-2021.
