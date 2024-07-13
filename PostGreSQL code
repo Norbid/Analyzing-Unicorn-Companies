@@ -1,4 +1,4 @@
-WITH first_query AS (
+WITH cte_1 AS (
 	SELECT
 		i.industry
 		,count(*) AS count_of_companies
@@ -11,7 +11,7 @@ WITH first_query AS (
 	LIMIT 3
 ),
 
-second_query AS (
+cte_2 AS (
 	SELECT
 		COUNT(*) AS num_unicorns
 		,i.industry AS industry
@@ -31,8 +31,8 @@ SELECT
 	,year
 	,num_unicorns
 	,round(AVG(valuation) / 1000000000, 2) AS average_valuation_billions
-FROM first_query
-JOIN second_query
+FROM cte_1
+JOIN cte_2
 USING(industry)
 GROUP BY industry, year, num_unicorns
 ORDER BY year DESC, num_unicorns DESC;
